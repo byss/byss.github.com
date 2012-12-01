@@ -2,5 +2,6 @@
 	"base": "http://byss.github.com/",
 	"types": ["object", "object2", "array", "array2"],
 	"formats": ["json", "xml"],
-	"codings": ["utf8", "cp1251"]
+	"codings": ["utf8", "cp1251"],
+	"delimiter": "."
 }
