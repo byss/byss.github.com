@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<person>
+	<id>1</id>
+	<avatar>images/user_1.png</avatar>
+	<age>28</age>
+	<admin>false</admin>
+	<name>Лазарь Михайлов</name>
+	<company>Airdyne</company>
+</person>

@@ -1,0 +1,5 @@
+{
+	"types": ["object", "object2", "array", "array2"],
+	"formats": ["json", "xml"],
+	"codings": ["utf8", "cp1251"]
+}

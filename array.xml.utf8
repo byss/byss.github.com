@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<people>
+	<human>
+		<id>1</id>
+		<name>Богдан Кузнецов</name>
+		<company>Textiqua</company>
+		<phone>+70959880057</phone>
+	</human>
+	<human>
+		<id>2</id>
+		<name>Моисей Зайцев</name>
+		<company>Mescatron</company>
+		<phone>+70951452173</phone>
+	</human>
+	<human>
+		<id>3</id>
+		<name>Ян Богданов</name>
+		<company>Proline</company>
+		<phone>+70958821096</phone>
+	</human>
+	<human>
+		<id>4</id>
+		<name>Денис Данилов</name>
+		<company>Keytheon</company>
+		<phone>+70959551224</phone>
+	</human>
+	<human>
+		<id>5</id>
+		<name>Константин Павлов</name>
+		<company>Truetomic</company>
+		<phone>+70953320477</phone>
+	</human>
+	<human>
+		<id>6</id>
+		<name>Николай Макаров</name>
+		<company>Robotomic</company>
+		<phone>+70954789069</phone>
+	</human>
+	<human>
+		<id>7</id>
+		<name>Иоан Орлов</name>
+		<company>Inridium</company>
+		<phone>+70951279575</phone>
+	</human>
+	<human>
+		<id>8</id>
+		<name>Денис Данилов</name>
+		<company>Keytheon</company>
+		<phone>+70952413492</phone>
+	</human>
+	<human>
+		<id>9</id>
+		<name>Илья Величко</name>
+		<company>Netseco</company>
+		<phone>+70958980300</phone>
+	</human>
+	<human>
+		<id>10</id>
+		<name>Вячеслав Захаров</name>
+		<company>SysUSA</company>
+		<phone>+70951739931</phone>
+	</human>
+	<human>
+		<id>11</id>
+		<name>Михаил Колесников</name>
+		<company>Turbomart</company>
+		<phone>+70952002270</phone>
+	</human>
+	<human>
+		<id>12</id>
+		<name>Яков Олейник</name>
+		<company>Safeagra</company>
+		<phone>+70957393119</phone>
+	</human>
+	<human>
+		<id>13</id>
+		<name>Михаил Колесников</name>
+		<company>Turbomart</company>
+		<phone>+70951691035</phone>
+	</human>
+	<human>
+		<id>14</id>
+		<name>Сергей Поляков</name>
+		<company>Robocomm</company>
+		<phone>+70953771430</phone>
+	</human>
+	<human>
+		<id>15</id>
+		<name>Петр Григорьев</name>
+		<company>US Infratouch</company>
+		<phone>+70950071925</phone>
+	</human>
+</people>

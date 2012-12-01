@@ -1,0 +1,94 @@
+[
+
+    {
+        "id": 1,
+        "name": "Богдан Кузнецов",
+        "company": "Textiqua",
+        "phone": "+70959880057"
+    },
+    {
+        "id": 2,
+        "name": "Моисей Зайцев",
+        "company": "Mescatron",
+        "phone": "+70951452173"
+    },
+    {
+        "id": 3,
+        "name": "Ян Богданов",
+        "company": "Proline",
+        "phone": "+70958821096"
+    },
+    {
+        "id": 4,
+        "name": "Денис Данилов",
+        "company": "Keytheon",
+        "phone": "+70959551224"
+    },
+    {
+        "id": 5,
+        "name": "Константин Павлов",
+        "company": "Truetomic",
+        "phone": "+70953320477"
+    },
+    {
+        "id": 6,
+        "name": "Николай Макаров",
+        "company": "Robotomic",
+        "phone": "+70954789069"
+    },
+    {
+        "id": 7,
+        "name": "Иоан Орлов",
+        "company": "Inridium",
+        "phone": "+70951279575"
+    },
+    {
+        "id": 8,
+        "name": "Денис Данилов",
+        "company": "Keytheon",
+        "phone": "+70952413492"
+    },
+    {
+        "id": 9,
+        "name": "Илья Величко",
+        "company": "Netseco",
+        "phone": "+70958980300"
+    },
+    {
+        "id": 10,
+        "name": "Вячеслав Захаров",
+        "company": "SysUSA",
+        "phone": "+70951739931"
+    },
+    {
+        "id": 11,
+        "name": "Михаил Колесников",
+        "company": "Turbomart",
+        "phone": "+70952002270"
+    },
+    {
+        "id": 12,
+        "name": "Яков Олейник",
+        "company": "Safeagra",
+        "phone": "+70957393119"
+    },
+    {
+        "id": 13,
+        "name": "Михаил Колесников",
+        "company": "Turbomart",
+        "phone": "+70951691035"
+    },
+    {
+        "id": 14,
+        "name": "Сергей Поляков",
+        "company": "Robocomm",
+        "phone": "+70953771430"
+    },
+    {
+        "id": 15,
+        "name": "Петр Григорьев",
+        "company": "US Infratouch",
+        "phone": "+70950071925"
+    }
+
+]

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<person>
+	<id>1</id>
+	<avatar>images/user_1.png</avatar>
+	<age>36</age>
+	<admin>true</admin>
+	<name>Игорь Орлов</name>
+	<company>OpKeycomm</company>
+	<phone>+70959845046</phone>
+	<email>igor@opkeycomm.com</email>
+	<registerDate>Sat, 23 Nov 2002 14:21:24 GMT</registerDate>
+	<friends>
+		<friend>
+			<id>1</id>
+			<name>Сергей Поляков</name>
+			<phone>+70950093513</phone>
+		</friend>
+		<friend>
+			<id>2</id>
+			<name>Станислав Тарасов</name>
+			<phone>+70958690401</phone>
+		</friend>
+		<friend>
+			<id>3</id>
+			<name>Николай Макаров</name>
+			<phone>+70953796148</phone>
+		</friend>
+	</friends>
+</person>
