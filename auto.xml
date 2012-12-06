@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object>
+	<field1>1</field1>
+	<field2>2</field2>
+	<field_three>0</field_three>
+	<field4>
+		<field>value</field>
+	</field4>
+	<field5>
+		<dummy>
+			<field>value0</field>
+		</dummy>
+		<dummy>
+			<field>value1</field>
+		</dummy>
+		<dummy>
+			<field>value2</field>
+		</dummy>
+	</field5>
+<object>

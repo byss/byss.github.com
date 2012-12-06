@@ -1,0 +1,19 @@
+{
+	"field1": 1,
+	"field2": "2",
+	"field_three": 0,
+	"field4": {
+		"field": "value"
+	},
+	"field5": [
+		{
+			"field": "value0",
+		},
+		{
+			"field": "value1",
+		},
+		{
+			"field": "value2",
+		}
+	]
+}
