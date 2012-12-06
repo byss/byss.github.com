@@ -2,7 +2,7 @@
 <object>
 	<field1>1</field1>
 	<field2>2</field2>
-	<field_three>0</field_three>
+	<field_three>42</field_three>
 	<field4>
 		<field>value</field>
 	</field4>
