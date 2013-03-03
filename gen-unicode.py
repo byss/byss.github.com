@@ -182,9 +182,9 @@ for page_n in xrange (MAXUNICODE / PAGESIZE):
 	log ('Writing table', filename = fn, total = hexdig (MAXUNICODE))
 
 	prev_fn = pagelink (page_n - 1) if page_n else None
-	prev_link = '<a href="' + prev_fn + '">&larr;&nbsp;' + pagechars (page_n - 1) + '</a>' if prev_fn else '&larr;&nbsp;'
-	next_fn = pagelink (page_n + 1) if page_n < MAXUNICODE / PAGESIZE else None
-	next_link = '<a href="' + next_fn + '">' + pagechars (page_n + 1) + '&nbsp;&rarr;</a>' if next_fn else '&nbsp;&rarr;'
+	prev_link = '<a href="' + prev_fn + '">&larr;&nbsp;' + pagechars (page_n - 1) + '</a>' if prev_fn else '&larr;'
+	next_fn = pagelink (page_n + 1) if page_n < MAXUNICODE / PAGESIZE - 1 else None
+	next_link = '<a href="' + next_fn + '">' + pagechars (page_n + 1) + '&nbsp;&rarr;</a>' if next_fn else '&rarr;'
 
 	fout.write ('''\
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
