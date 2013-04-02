@@ -1,0 +1,610 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>KBAPIConnectionDelegate Protocol Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">KBAPISupport </a></h1>
+				<a id="developerHome" href="../index.html">Kirill byss Bystrov</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">KBAPIConnectionDelegate Protocol Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/apiConnection:didFailWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- apiConnection:didFailWithError:</option>
+	
+	<option value="//api/name/apiConnection:didReceiveData:">&nbsp;&nbsp;&nbsp;&nbsp;- apiConnection:didReceiveData:</option>
+	
+	<option value="//api/name/apiConnection:didReceiveJSON:">&nbsp;&nbsp;&nbsp;&nbsp;- apiConnection:didReceiveJSON:</option>
+	
+	<option value="//api/name/apiConnection:didReceiveResponse:">&nbsp;&nbsp;&nbsp;&nbsp;- apiConnection:didReceiveResponse:</option>
+	
+	<option value="//api/name/apiConnection:didReceiveXML:">&nbsp;&nbsp;&nbsp;&nbsp;- apiConnection:didReceiveXML:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Errors handling">Errors handling</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Handling responses">Handling responses</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/apiConnection:didFailWithError:">apiConnection:didFailWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/apiConnection:didReceiveData:">apiConnection:didReceiveData:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/apiConnection:didReceiveJSON:">apiConnection:didReceiveJSON:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/apiConnection:didReceiveResponse:">apiConnection:didReceiveResponse:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/apiConnection:didReceiveXML:">apiConnection:didReceiveXML:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="KBAPIConnectionDelegate Protocol Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">KBAPIConnectionDelegate Protocol Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">KBAPIConnectionDelegate.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p><a href="../Classes/KBAPIConnection.html">KBAPIConnection</a> instances' delegates must implement this protocol to receive
+connection-related events. Note, that all methods from &ldquo;Handling responses&rdquo;
+section are optional, but the delegate should implement one of the methods
+to actually use the <a href="../Classes/KBAPIConnection.html">KBAPIConnection</a> instances.</p>
+
+<p>Delegate&rsquo;s methods are checked in the following order:</p>
+
+<ol>
+<li>If the connection has expected response class, then the <a href="#//api/name/apiConnection:didReceiveResponse:">apiConnection:didReceiveResponse:</a>
+is tried.</li>
+<li>One of <a href="#//api/name/apiConnection:didReceiveJSON:">apiConnection:didReceiveJSON:</a> and <a href="#//api/name/apiConnection:didReceiveXML:">apiConnection:didReceiveXML:</a> is tried,
+depending on the response type.</li>
+<li><a href="#//api/name/apiConnection:didReceiveData:">apiConnection:didReceiveData:</a> is tried.</li>
+</ol>
+
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Errors handling" name="task_Errors handling"></a>
+						<h3 class="subsubtitle task-title">Errors handling</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/apiConnection:didFailWithError:">&ndash;&nbsp;apiConnection:didFailWithError:</a></code>
+		<span class="tooltip"><p>Called when connection receives error.</p></span>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li>
+						</ul>
+						
+						
+						<a title="Handling responses" name="task_Handling responses"></a>
+						<h3 class="subsubtitle task-title">Handling responses</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/apiConnection:didReceiveJSON:">&ndash;&nbsp;apiConnection:didReceiveJSON:</a></code>
+		<span class="tooltip"><p>Connection received JSON object.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/apiConnection:didReceiveXML:">&ndash;&nbsp;apiConnection:didReceiveXML:</a></code>
+		<span class="tooltip"><p>Connection received XML object.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/apiConnection:didReceiveResponse:">&ndash;&nbsp;apiConnection:didReceiveResponse:</a></code>
+		<span class="tooltip"><p>Connection received some response and constructed response object.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/apiConnection:didReceiveData:">&ndash;&nbsp;apiConnection:didReceiveData:</a></code>
+		<span class="tooltip"><p>Connection received arbitrary data.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/apiConnection:didFailWithError:" title="apiConnection:didFailWithError:"></a>
+	<h3 class="subsubtitle method-title">apiConnection:didFailWithError:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called when connection receives error.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)apiConnection:(KBAPIConnection *)<em>connection</em> didFailWithError:(NSError *)<em>error</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>connection</em></dt>
+			<dd><p>Connection which received error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>error</em></dt>
+			<dd><p>Error information.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method is called not only on network errors, but also on malformed JSON
+or XML response or when object cannot be constructed from given source.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KBAPIConnectionDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/apiConnection:didReceiveData:" title="apiConnection:didReceiveData:"></a>
+	<h3 class="subsubtitle method-title">apiConnection:didReceiveData:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Connection received arbitrary data.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)apiConnection:(KBAPIConnection *)<em>connection</em> didReceiveData:(NSData *)<em>data</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>connection</em></dt>
+			<dd><p>Connection which received response.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>data</em></dt>
+			<dd><p>Raw received data.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KBAPIConnectionDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/apiConnection:didReceiveJSON:" title="apiConnection:didReceiveJSON:"></a>
+	<h3 class="subsubtitle method-title">apiConnection:didReceiveJSON:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Connection received JSON object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)apiConnection:(KBAPIConnection *)<em>connection</em> didReceiveJSON:(id)<em>JSON</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>connection</em></dt>
+			<dd><p>Connection which received response.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>JSON</em></dt>
+			<dd><p>The response object.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method is only defined when KBAPISupport is compiled with JSON support.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KBAPIConnectionDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/apiConnection:didReceiveResponse:" title="apiConnection:didReceiveResponse:"></a>
+	<h3 class="subsubtitle method-title">apiConnection:didReceiveResponse:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Connection received some response and constructed response object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)apiConnection:(KBAPIConnection *)<em>connection</em> didReceiveResponse:(id&lt;KBEntity&gt;)<em>response</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>connection</em></dt>
+			<dd><p>Connection which received response.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>response</em></dt>
+			<dd><p>Constructed response object.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KBAPIConnectionDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/apiConnection:didReceiveXML:" title="apiConnection:didReceiveXML:"></a>
+	<h3 class="subsubtitle method-title">apiConnection:didReceiveXML:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Connection received XML object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)apiConnection:(KBAPIConnection *)<em>connection</em> didReceiveXML:(GDataXMLDocument *)<em>XML</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>connection</em></dt>
+			<dd><p>Connection which received response.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>XML</em></dt>
+			<dd><p>The response XML document.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method is only defined when KBAPISupport is compiled with XML support.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KBAPIConnectionDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Kirill byss Bystrov. All rights reserved. (Last updated: 2013-04-02)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>
